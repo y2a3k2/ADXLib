@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="System">
+      <UniqueIdentifier>{fae18cce-8c6a-428e-9fa2-592d4bb56235}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\AppManager">
+      <UniqueIdentifier>{3557d670-cd89-4123-9cb8-08a1ea0aef66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\SceneManager">
+      <UniqueIdentifier>{4d576411-db10-416e-b0ba-e4875cacbe8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{23c4ce3b-6ebb-48f2-8042-a4d8d1eaf199}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Scene">
+      <UniqueIdentifier>{d7b5b09b-6ed1-46bf-8581-fb090c8de409}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Scene\Play">
+      <UniqueIdentifier>{47372225-83e9-478a-8990-18081adf8b44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Scene\Result">
+      <UniqueIdentifier>{a74ecce5-e9eb-48e4-a6e5-c20b1f2ec7a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Scene\Title">
+      <UniqueIdentifier>{fa4fd2b0-af1a-4703-9c47-9d46e7d6acdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Scene\Boot">
+      <UniqueIdentifier>{1714fe81-90b2-416a-b635-5f00a2936544}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library">
+      <UniqueIdentifier>{830e8a79-0450-45ab-89f6-a53926852583}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\InputManager">
+      <UniqueIdentifier>{dce28341-0bf8-4b67-b9c6-bf7b88b34dfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\ResourceManager">
+      <UniqueIdentifier>{9e087b6d-134a-4cea-81b6-ff9e1cb4dcc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\TimeManager">
+      <UniqueIdentifier>{78e3002e-7731-4d2a-8993-6ce9b3119b58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Scene\Test">
+      <UniqueIdentifier>{ab52b0ff-6666-4556-9528-83d60c792fc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\ColliderManager">
+      <UniqueIdentifier>{58312330-2462-4f71-aaa6-373ba59581c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\ComponentManager">
+      <UniqueIdentifier>{9353c218-a38a-44b6-b6d7-8df827f379ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\DebugManager">
+      <UniqueIdentifier>{49666f93-4724-4ea9-93b7-881932ebaab8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\GameObjectManager">
+      <UniqueIdentifier>{0ce44b94-cb5c-4709-bc01-4f179e70eb3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\TestEnemy">
+      <UniqueIdentifier>{fb4ba967-d1f3-4463-8368-2ecb75c19494}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\TestPlayer">
+      <UniqueIdentifier>{5c951389-34a0-4b6e-bd74-bd1ccf28ce3f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="System\AppManager\AppManager.h">
+      <Filter>System\AppManager</Filter>
+    </ClInclude>
+    <ClInclude Include="System\SceneManager\SceneManager.h">
+      <Filter>System\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scene\Boot\Boot.h">
+      <Filter>Source\Scene\Boot</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scene\Play\Play.h">
+      <Filter>Source\Scene\Play</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scene\Result\Result.h">
+      <Filter>Source\Scene\Result</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scene\Test\Test.h">
+      <Filter>Source\Scene\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scene\Title\Title.h">
+      <Filter>Source\Scene\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\Transform.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\GameObject.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\Sound.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="System\InputManager\InputManager.h">
+      <Filter>System\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scene\SceneBase.h">
+      <Filter>Source\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="System\ResourceManager\ResourceManager.h">
+      <Filter>System\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="System\TimeManager\TimeManager.h">
+      <Filter>System\TimeManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\DxMath.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\SingletonObject.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="System\SystemManager.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Player\Player.h">
+      <Filter>Source\TestPlayer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Enemy\Enemy.h">
+      <Filter>Source\TestEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="System\ColliderManager\ColliderManager.h">
+      <Filter>System\ColliderManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\Component.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="System\ComponentManager\ComponentManager.h">
+      <Filter>System\ComponentManager</Filter>
+    </ClInclude>
+    <ClInclude Include="System\DebugManager\DebugManager.h">
+      <Filter>System\DebugManager</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Config.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Layer.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="System\SceneID.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="System\GameObjectManager\GameObjectManager.h">
+      <Filter>System\GameObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\Text.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\Image.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\Movie.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\Sprite.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\BoxCollider.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\CircleCollider.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\Collider.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Tag.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\Library.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="System\AppManager\AppManager.cpp">
+      <Filter>System\AppManager</Filter>
+    </ClCompile>
+    <ClCompile Include="System\AppManager\WinMain.cpp">
+      <Filter>System\AppManager</Filter>
+    </ClCompile>
+    <ClCompile Include="System\SceneManager\SceneManager.cpp">
+      <Filter>System\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scene\Boot\Boot.cpp">
+      <Filter>Source\Scene\Boot</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scene\Play\Play.cpp">
+      <Filter>Source\Scene\Play</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scene\Result\Result.cpp">
+      <Filter>Source\Scene\Result</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scene\Test\Test.cpp">
+      <Filter>Source\Scene\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scene\Title\Title.cpp">
+      <Filter>Source\Scene\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\Sound.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="System\InputManager\InputManager.cpp">
+      <Filter>System\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="System\ResourceManager\ResourceManager.cpp">
+      <Filter>System\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="System\TimeManager\TimeManager.cpp">
+      <Filter>System\TimeManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DxMath.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\SingletonObject.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="System\SystemManager.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Player\Player.cpp">
+      <Filter>Source\TestPlayer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Enemy\Enemy.cpp">
+      <Filter>Source\TestEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="System\ColliderManager\ColliderManager.cpp">
+      <Filter>System\ColliderManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\Transform.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="System\ComponentManager\ComponentManager.cpp">
+      <Filter>System\ComponentManager</Filter>
+    </ClCompile>
+    <ClCompile Include="System\DebugManager\DebugManager.cpp">
+      <Filter>System\DebugManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\GameObject.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="System\SceneChange.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="System\GameObjectManager\GameObjectManager.cpp">
+      <Filter>System\GameObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\Text.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\Component.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\Image.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\Movie.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\Sprite.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\BoxCollider.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\CircleCollider.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
