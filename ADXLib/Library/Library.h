@@ -10,11 +10,14 @@
 #include<BoxCollider.h>
 #include<CircleCollider.h>
 
+#include<Sound.h>
+
 #include<DxMath.h>
 #include<Transform.h>
-#include<Sound.h>
+#include<Timer.h>
+#include<Counter.h>
+#include<StructSave.h>
 
 #include<Config.h>
 #include<Layer.h>
 #include<Tag.h>
-

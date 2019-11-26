@@ -9,8 +9,10 @@ class Sound : public Component {
 public:
 	Sound();
 	Sound(GameObject *body);
-	virtual	~Sound();
-	virtual void Load(const char* fileName);
+	virtual ~Sound();
+
+	virtual void Update()override;
+	virtual void Load(const char* fileName, bool quickly = false);
 
 	// ‰¹‚ğÄ¶‚·‚é(’â~’†‚È‚ç“r’†‚©‚ç)
 	virtual void Play();
@@ -27,7 +29,16 @@ public:
 protected:
 	void Unload();
 
-protected:
-	int m_handle;
+	enum STATE {
+		NONE,
+		PLAY,
+		REPLAY,
+		LOOP,
+	};
 
+protected:
+	float m_initVolume;
+	int m_handle;
+	std::string m_fileName;
+	STATE m_state;
 };

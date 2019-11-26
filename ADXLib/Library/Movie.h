@@ -15,5 +15,6 @@ protected:
 
 protected:
 	int m_handle;
+	std::string m_fileName;
 
 };

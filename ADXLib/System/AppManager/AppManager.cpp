@@ -31,25 +31,21 @@ void AppManager::Initalize() {
 	int x = GetSystemMetrics(SM_CXSCREEN);
 	int y = GetSystemMetrics(SM_CYSCREEN);
 
-	switch (SCREEN_TYPE) {
+	SetGraphMode(WINDOW_WIDTH, WINDOW_HEIGHT, 32);	// 画面サイズと色の変更
+	SetDrawArea(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT); // 描写範囲
 
-	case 0:
-		SetGraphMode(WINDOW_WIDTH, WINDOW_HEIGHT, 32);	// 画面サイズと色の変更
-		SetDrawArea(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT); // 描写範囲
-		ChangeWindowMode(TRUE);							// スクリーン設定。
-		break;
-
-	case 1:
-		SetGraphMode(x, y, 32);							// 画面サイズと色の変更
-		SetDrawArea(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT); // 描写範囲
-		ChangeWindowMode(TRUE);							// スクリーン設定。
-		break;
-
-	case 2:
-		SetGraphMode(WINDOW_WIDTH, WINDOW_HEIGHT, 32);	// 画面サイズと色の変更
-		SetDrawArea(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT); // 描写範囲
-		ChangeWindowMode(FALSE);						// スクリーン設定。
-		break;
+	// フルスク
+	if (SCREEN_TYPE == 2) {
+		ChangeWindowMode(FALSE);
+	}
+	// それ以外
+	else {
+		int x = (SCREEN_TYPE == 0) ? WINDOW_WIDTH : GetSystemMetrics(SM_CXSCREEN);
+		int y = (SCREEN_TYPE == 0) ? WINDOW_HEIGHT : GetSystemMetrics(SM_CYSCREEN);
+		float xSize = ((float)x / (float)WINDOW_WIDTH);
+		float ySize = ((float)y / (float)WINDOW_HEIGHT);
+		SetWindowSizeExtendRate(min(xSize, ySize));
+		ChangeWindowMode(TRUE);
 	}
 
 	SetWindowInitPosition(0, 0);					// ウインドウの初期座標を指定する
@@ -61,21 +57,21 @@ void AppManager::Initalize() {
 
 	srand(NULL);
 
-	// システムの管理人を生成する
+	// システムの管理人を生成、初期化する
 	SystemInstance->Initialize();
 }
 
 void AppManager::Update() {
 
-	SystemInstance->FirstUpdate();
-	SystemInstance->Update();
-	SystemInstance->LastUpdate();
+	SystemInstance->FirstUpdate();	// 先行して行うUpdate
+	SystemInstance->Update();		// 通常のUpdate
+	SystemInstance->LastUpdate();	// 最後に行うUpdate
 }
 
 void AppManager::Draw() {
 
 	clsDx();						// 前フレームの簡易文字列を消す。
 	ClearDrawScreen();				// 前フレームの描写を消す。
-	SystemInstance->Draw();
+	SystemInstance->Draw();			// 描画処理
 	ScreenFlip();					// 裏画面を表画面に反映
 }

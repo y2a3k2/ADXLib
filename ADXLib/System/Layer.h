@@ -5,7 +5,7 @@
 enum class LAYER {
 
 	NONE = 0,
-
+	PLAYER,
 	UI,
 	MAX,
 };

@@ -15,7 +15,7 @@ public:
 
 	virtual	void Draw()override;
 
-	virtual	void Load(const char *fileName);
+	virtual	void Load(const char *fileName, bool quickly = false);
 
 	void SetRect(int lx, int ly, int rx, int ry);
 	void SetScale(float scale);
@@ -27,5 +27,7 @@ private:
 	Rect m_rect;
 	float m_angle;
 	float m_scale;
+
+	bool m_isRectInit;
 
 };

@@ -2,6 +2,7 @@
 #include"../SceneBase.h"
 
 class Sound;
+class Sprite;
 
 class Test : public SceneBase {
 
@@ -12,6 +13,9 @@ public:
 	void Update()override;
 
 private:
-	Sound *m_bgm;
+	float m_timer;
 
+	Sound * m_bgm;
+	Sprite* m_bg;
+	Sprite* m_icon;
 };

@@ -7,12 +7,13 @@
 #include"../Source/Scene/Title/Title.h"
 #include"../Source/Scene/Play/Play.h"
 #include"../Source/Scene/Result/Result.h"
-#include"../Source/Scene/Test/Test.h"
+#include"../Source/Scene/Test/Test2d.h"
+#include"../Source/Scene/Test/Test3d.h"
 
 // どのシーンから開始するかをここで変更できる
 void SceneManager::StartScene() {
 
-	m_nextScene = SCENE_ID::TEST;
+	m_nextScene = SCENE_ID::TEST2D;
 }
 
 // シーン切り替え処理
@@ -28,10 +29,11 @@ void SceneManager::SceneChangeProcess() {
 	switch (next) {
 
 		/* シーンを増やすたびに追加する */
-	case SCENE_ID::TITLE:	m_scene = GameObject::GetRoot()->CreateObject<Title>();		break;
-	case SCENE_ID::PLAY:	m_scene = GameObject::GetRoot()->CreateObject<Play>();		break;
-	case SCENE_ID::RESULT:	m_scene = GameObject::GetRoot()->CreateObject<Result>();	break;
-	case SCENE_ID::TEST:	m_scene = GameObject::GetRoot()->CreateObject<Test>();		break;
+	case SCENE_ID::TITLE:	m_scene = GameObject::GetRoot()->CreateObject<Title>();			break;
+	case SCENE_ID::PLAY:	m_scene = GameObject::GetRoot()->CreateObject<Play>();			break;
+	case SCENE_ID::RESULT:	m_scene = GameObject::GetRoot()->CreateObject<Result>();		break;
+	case SCENE_ID::TEST2D:	m_scene = GameObject::GetRoot()->CreateObject<Test2d>();		break;
+	case SCENE_ID::TEST3D:	m_scene = GameObject::GetRoot()->CreateObject<Test3d>();		break;
 
 		// 何も呼ばれなかった場合は止める
 	default:				assert(false);							break;

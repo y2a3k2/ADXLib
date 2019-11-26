@@ -6,7 +6,7 @@ Enemy::Enemy()
 
 	/* ‰æ‘œ */
 	auto spr = AddComponent<Sprite>();
-	spr->Load("data\\texture\\enemy.png");
+	spr->Load("data\\texture\\enemy.png", true);	// ‘¦Žž“Ç‚Ýž‚Ý
 	spr->SetRect(0, 0, 32, 32);
 
 	auto col = AddComponent<BoxCollider>();

@@ -17,10 +17,10 @@ public:
 	bool IsEnable() { return m_enable; }
 
 	// 有効にする
-	bool SetEnable() { m_enable = true; }
+	void SetEnable() { m_enable = true; }
 
 	// 無効にする
-	bool SetDisable() { m_enable = false; }
+	void SetDisable() { m_enable = false; }
 
 	// 本体のレイヤーを返す
 	int GetLayer();

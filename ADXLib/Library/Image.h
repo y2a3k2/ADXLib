@@ -7,6 +7,8 @@
 ///	単純な表示しかできず、変形させることは不可能
 ///	UIや一枚絵を表示する時に処理を軽く表示できる
 ///</summary>
+
+class Transform;
 class Image : public Component {
 
 public:
@@ -15,8 +17,8 @@ public:
 	virtual	~Image();
 	virtual	void Draw()override;
 
-	// ファイルをロードする
-	virtual	void Load(const char *fileName);
+	// ファイルをロードする(第二引数にtrueを送ると即時にロードする)
+	virtual	void Load(const char *fileName, bool quickly = false);
 	// 画像の中心点を変更する
 	void SetCenter(int cx, int cy);
 	// 画像の色の値を減らす
@@ -50,10 +52,16 @@ public:
 	// 画像のWorld座標
 	VECTOR GetWorldPosition();
 
+	// 画像のローカル座標を代入
+	void SetPosition(VECTOR pos);
+	// 画像のローカル回転を代入
+	void SetRotation(VECTOR rot);
+	// 画像のローカル拡縮を代入
+	void SetScale(VECTOR sca);
+
 protected:
 	// 画像を消す
 	inline void Unload();
-
 
 protected:
 	int m_handle;				// グラフィックハンドル
@@ -63,5 +71,9 @@ protected:
 	bool m_trans;				// 画像の透過色を反映するか
 	int m_blendMode;			// ブレンドモード
 	unsigned char m_blendPal;	// ブレンドの強さ
+	std::string m_fileName;		// ファイル名
+	Transform *m_transform;		// 自動補正を消した場合に使う決め打ち用
+
+	bool m_isCenterInit;	// 中心点をあらかじめ初期化していたかどうか
 
 };

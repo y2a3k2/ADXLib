@@ -2,6 +2,7 @@
 #include<assert.h>
 #include<DxLib.h>
 #include<ComponentManager/ComponentManager.h>
+#include<ResourceManager/ResourceManager.h>
 
 Movie::Movie()
 	:Component() {
@@ -24,9 +25,13 @@ void Movie::Draw() {
 
 	// 中身がなければ
 	if (m_handle == -1) {
-		return;
+		int handle = ResourceManager::GetInstance()->GetGraphHandle(m_fileName.c_str());
+		// ロード出来ていないなら
+		if (handle == -1) {
+			return;
+		}
+		m_handle = handle;
 	}
-
 	PlayMovieToGraph(m_handle);
 }
 
@@ -36,8 +41,8 @@ void Movie::Load(const char * fileName) {
 	if (m_handle != -1) {
 		Unload();
 	}
-	m_handle = LoadGraph(fileName);
-	assert(m_handle != -1);
+	m_fileName = fileName;
+	ResourceManager::GetInstance()->PushLoadGraph(fileName);
 }
 
 inline void Movie::Unload(){
@@ -45,6 +50,6 @@ inline void Movie::Unload(){
 	if (m_handle == -1) {
 		return;
 	}
-	DeleteGraph(m_handle);
+	ResourceManager::GetInstance()->DeleteGraphHandle(m_fileName.c_str());
 	m_handle = -1;
 }

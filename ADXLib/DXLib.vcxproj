@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -23,15 +23,19 @@
     <ClInclude Include="Library\CircleCollider.h" />
     <ClInclude Include="Library\Collider.h" />
     <ClInclude Include="Library\Component.h" />
+    <ClInclude Include="Library\Counter.h" />
+    <ClInclude Include="Library\Random.h" />
     <ClInclude Include="Library\Image.h" />
     <ClInclude Include="Library\Library.h" />
     <ClInclude Include="Library\Movie.h" />
+    <ClInclude Include="Library\StructSave.h" />
     <ClInclude Include="Library\SingletonObject.h" />
     <ClInclude Include="Library\Sound.h" />
     <ClInclude Include="Library\Sprite.h" />
     <ClInclude Include="Library\Text.h" />
     <ClInclude Include="Library\GameObject.h" />
     <ClInclude Include="Library\DxMath.h" />
+    <ClInclude Include="Library\Timer.h" />
     <ClInclude Include="Library\Transform.h" />
     <ClInclude Include="Source\Enemy\Enemy.h" />
     <ClInclude Include="Source\Player\Player.h" />
@@ -39,7 +43,9 @@
     <ClInclude Include="Source\Scene\Play\Play.h" />
     <ClInclude Include="Source\Scene\Result\Result.h" />
     <ClInclude Include="Source\Scene\SceneBase.h" />
-    <ClInclude Include="Source\Scene\Test\Test.h" />
+    <ClInclude Include="Source\Scene\Test\Sphere.h" />
+    <ClInclude Include="Source\Scene\Test\Test3d.h" />
+    <ClInclude Include="Source\Scene\Test\Test2d.h" />
     <ClInclude Include="Source\Scene\Title\Title.h" />
     <ClInclude Include="System\AppManager\AppManager.h" />
     <ClInclude Include="System\ColliderManager\ColliderManager.h" />
@@ -63,18 +69,21 @@
     <ClCompile Include="Library\GameObject.cpp" />
     <ClCompile Include="Library\Image.cpp" />
     <ClCompile Include="Library\Movie.cpp" />
+    <ClCompile Include="Library\Random.cpp" />
     <ClCompile Include="Library\SingletonObject.cpp" />
     <ClCompile Include="Library\Sound.cpp" />
     <ClCompile Include="Library\Sprite.cpp" />
     <ClCompile Include="Library\Text.cpp" />
     <ClCompile Include="Library\DxMath.cpp" />
+    <ClCompile Include="Library\Timer.cpp" />
     <ClCompile Include="Library\Transform.cpp" />
     <ClCompile Include="Source\Enemy\Enemy.cpp" />
     <ClCompile Include="Source\Player\Player.cpp" />
     <ClCompile Include="Source\Scene\Boot\Boot.cpp" />
     <ClCompile Include="Source\Scene\Play\Play.cpp" />
     <ClCompile Include="Source\Scene\Result\Result.cpp" />
-    <ClCompile Include="Source\Scene\Test\Test.cpp" />
+    <ClCompile Include="Source\Scene\Test\Test2d.cpp" />
+    <ClCompile Include="Source\Scene\Test\Test3d.cpp" />
     <ClCompile Include="Source\Scene\Title\Title.cpp" />
     <ClCompile Include="System\AppManager\AppManager.cpp" />
     <ClCompile Include="System\AppManager\WinMain.cpp" />
@@ -98,26 +107,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -182,6 +191,7 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)System;$(ProjectDir)Library;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/await %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -211,6 +221,7 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)System;$(ProjectDir)Library;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/await %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

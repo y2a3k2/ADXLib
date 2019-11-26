@@ -8,5 +8,6 @@ enum class SCENE_ID {
 	TITLE,
 	PLAY,
 	RESULT,
-	TEST,
+	TEST2D,
+	TEST3D,
 };
